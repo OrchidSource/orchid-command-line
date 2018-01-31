@@ -1,4 +1,3 @@
-
 /**
  * Command-line script to launch a browser using Orchid.
  * TODO: Most of this code is just copy-and-pasted from index.js; all of that should
@@ -43,7 +42,7 @@ var all_but_sf = nyc_seeds.concat(eu_seeds).concat(cn_seeds);
 var virtuals = [];
 
 function start_orchid_network(desired_exit_location) {
-  var choices = all_but_sf;
+  var choices = all_seeds;
 
   if (!desired_exit_location)
     desired_exit_location = "ALL";
@@ -66,7 +65,6 @@ function start_orchid_network(desired_exit_location) {
   var result;
 
   async function filter(host) {
-    console.log("FILTER CALLED");
     return true;
   }
 
@@ -119,10 +117,9 @@ function startChrome() {
     '--proxy-server=socks5://127.0.0.1:1323',
     '--host-resolver-rules=MAP * ~NOTFOUND , EXCLUDE 127.0.0.1'
   ];
-  console.log("Chrom args:", args);
+  console.log("Chrome args:", args);
   if (this.instance) this.instance.kill();
   this.instance = spawn(program, args);
-  // win.webContents.send(this.EVENTS.CONNECTED);
   console.log("Chrome started");
 }
 

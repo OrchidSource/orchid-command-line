@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "logizomai": "^0.9.2",
     "@orchidprotocol/core": "*",
     "@orchidprotocol/service-vpn": "*"
   }
