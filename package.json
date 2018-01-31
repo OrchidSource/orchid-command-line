@@ -1,0 +1,15 @@
+{
+  "name": "orchid-command-line",
+  "version": "0.0.1",
+  "description": "command-line version of the Orchid application",
+  "main": "browse_with_orchid.js",
+  "scripts": {
+    "start": "node browse_with_orchid.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@orchidprotocol/core": "*",
+    "@orchidprotocol/service-vpn": "*"
+  }
+}
